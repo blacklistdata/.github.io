@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://use.typekit.net/nlj0rki.css?v=1"><link rel="stylesheet" href="wow-style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="wow-script.js"></script>
+<link rel="icon" type="image/x-icon" href="imgs\favicon\fav.JPG">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+<style type="text/css">* {cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2018/06/08/hell-yeah-pointer-5.html" target="_blank" title="Hell Yeah Pointer 5"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Hell Yeah Pointer 5" style="position:absolute; top: 0px; right: 0px;" /></a>
+
+
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <rssapp-ticker id="MTaiUPyKOYzCfD5b"></rssapp-ticker><script src="https://widget.rss.app/v1/ticker.js" type="text/javascript" async></script>
+    <div class="container" id="appfilters">
+      <div class="row d-none">
+        <div class="col-12">
+          <h2>Selected:</h2>
+          <ul>
+            <li>Category: <span data-bind="text: selectedFilters.category"></span></li>
+            <li>Brand: <span data-bind="text: selectedFilters.brand"></span></li>
+            <li>Type: <span data-bind="text: selectedFilters.type"></span></li>
+            <li>Collection: <span data-bind="text: selectedFilters.collection"></span></li>
+            <li>Query: <span data-bind="text: query"></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="title">Blacklist</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+            </div>
+            <input type="search" class="form-control" placeholder="Search toon here..." aria-label="Search" aria-describedby="basic-addon1" data-bind="textInput: query" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div data-bind="component: {name: 'product-filter', params: {value: selectedFilters.category, label: 'All', dataoptions: filters.categories, id: 'category'}}"></div>
+        </div>
+        <div class="col-3">
+          <div data-bind="component: {name: 'product-filter', params: {value: selectedFilters.brand, label: 'Spec', dataoptions: filters.brands, id: 'brand'}}"></div>
+        </div>
+        <div class="col-3">
+          <div data-bind="component: {name: 'product-filter', params: {value: selectedFilters.type, label: 'Geared', dataoptions: filters.types, id: 'type'}}"></div>
+        </div>
+        <div class="col-3">
+          <div data-bind="component: {name: 'product-filter', params: {value: selectedFilters.collection, label: 'Prio', dataoptions: filters.collections, id: 'collection'}}"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 my-2 text-right">
+          <button class="btn" data-bind="click: resetFilters">Reset Filter</button>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <!-- ko foreach: results.data -->
+        <div class="col-3">
+          <div class="single-result mb-2">
+            <div class="image-container">
+              <img data-bind="attr: { src: image }" class="img-fluid" />
+              <div class="caption" data-bind="text: caption"></div>
+            </div>
+            <div data-bind="ifnot: isCategory()" class="info">
+              <div class="info-1" data-bind="text: brand"></div>
+              <div class="info-2" data-bind="text: (category+' | '+title)"></div>
+            </div>
+          </div>
+        </div>
+        <!-- /ko -->
+      </div>
+    </div>
+    <div class="discordWidget">
+      <iframe  src="https://discord.com/widget?id=767062013989486643&theme=dark" width="60%" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
